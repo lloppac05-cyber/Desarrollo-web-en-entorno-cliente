@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REPASO GEOLOCALIZACION</title>
+</head>
+<body>
+    <h2>Ejercicio 1: obtengo ubicacion</h2>
+    <script>
+        function obtengoDatosGeolocalizacion(posicion){
+            console.log("Latitud: " + posicion.coords.latitude);
+            console.log("Longitud: " + posicion.coords.longitude);
+            var map = L.map('map').setView([posicion.coords.latitude, posicion.coords.longitude], 13);
+            L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                maxZoom: 19,
+            attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+            }).addTo(map);
+        }
+
+        if (navigator.geolocation) {
+            //el ejercicio 2 es con watchPosition
+            navigator.geolocation.getCurrentPosition(obtengoDatosGeolocalizacion);
+        } else {
+            console.log("La geolocalización no es soportada por este navegador.");
+        }
+    </script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
+      <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     crossorigin="">
+    var map = L.map('map').setView([0, 0], 13);
+    
+    </script>
+     <div id="map"></div>
+    <style>#map { height: 180px; }</style>
+</body>
+</html>

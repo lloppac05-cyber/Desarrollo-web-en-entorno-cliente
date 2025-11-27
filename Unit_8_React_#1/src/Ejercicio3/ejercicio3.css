@@ -1,0 +1,17 @@
+#ejercicio3 button{
+    list-style-type: none;
+    display: flex;
+    margin: 25px;
+    color: white;
+    background-color: fuchsia;
+    padding: 5px;
+}
+
+#ejercicio3 button:hover{
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    color: fuchsia;
+    background-color: white;
+    padding: 5px;
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unidad 2 Ejercicio 6 BOM</title>
+</head>
+<body>
+   
+  <h1>Explorador del BOM</h1>
+<!-- div para la informacion del navegador -->
+  <div class="info-navegador">
+    <h2>Información del navegador</h2>
+    <ul>
+      <li><strong>Navegador:</strong> <span id="info"></span></li>
+      <li><strong>Idioma:</strong> <span id="idioma"></span></li>
+      <li><strong>Plataforma:</strong> <span id="platforma"></span></li>
+      <li><strong>Resolución:</strong> <span id="resolucion"></span></li>
+    </ul>
+    <script>
+      //informacion del navegador que se muestre en la lista con id info
+        document.getElementById("info").textContent = navigator.userAgent;
+        //idioma del navegador
+        document.getElementById("idioma").textContent = navigator.language;
+        //plataforma
+        document.getElementById("platforma").textContent = navigator.platform;
+        //resolucion de a pantalla (ventana)
+        document.getElementById("resolucion").textContent = window.innerWidth + " x " + window.innerHeight;
+    </script>
+  </div>
+
+<!-- div para la navegacion -->
+  <div class ="navegacion">
+    <h2>Navegación</h2>
+    <!-- history.back para ir atras-->
+    <button onclick="history.back()">Atrás</button>
+    <!-- history.forward para ir adelante-->
+    <button onclick="history.forward()">Adelante</button>
+    <p>URL actual: </p>
+    <!--llamar con el id al script y mostrar la url por pantalla-->
+    <p id="url"></p>
+    <script>
+        // Obtener url
+        document.getElementById("url").textContent = location.href;
+    </script>
+  </div>
+
+<!-- div para la geolocalizacion-->
+  <div class="geolocalizacion">
+    <h2>Geolocalizacion</h2>
+    <p>Presiona el botón para obtener tu ubicación</p>
+    <button onclick="obtenerUbicacion()" ><a href="https://www.google.es/maps">Obtener Ubicación</a></button>
+  </div>
+
+<!--div para un reloj emergente-->
+  <div class="reloj-emergente">
+    <h2>Reloj Emergente</h2>
+    <button onclick="abrirReloj()">Abrir Reloj(se cierra en 20s)</button>
+    <script>
+    function abrirReloj() {
+      // Abre la ventana
+      let ventana = window.open("", "", "width=200,height=100");
+       // Función para actualizar la hora
+      function mostrarHora() {
+        let ahora = new Date();
+        ventana.document.body.innerHTML = ahora.toLocaleTimeString();
+      }
+      // Actualizar cada segundo
+      let reloj = setInterval(mostrarHora, 1000);
+      // mostrar la hora al abrir la ventana emergente
+      mostrarHora(); 
+      // La cierra a los 20 segundos
+      //20 segundos que son 20000 milisegundos
+      setTimeout(() => {
+        clearInterval(reloj);
+        ventana.close();
+      }, 20000);
+    }
+  </script>
+  </div>
+</body>
+</html>

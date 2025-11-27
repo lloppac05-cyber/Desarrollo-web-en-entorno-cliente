@@ -1,0 +1,14 @@
+h2{
+    color: blue;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+li:nth-child(odd){
+    background-color: aquamarine;
+    color: blue;
+}
+
+li:nth-child(even){
+    background-color: blue;
+    color: aquamarine;
+}

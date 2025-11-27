@@ -1,0 +1,26 @@
+body{
+    text-align: center;
+    color: white;
+    background-color: rgb(94, 154, 174);
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 25px;
+}
+
+h1{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+button{
+    background-color: blue;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 18px;
+    text-align: center;
+    border: 2px solid rgb(140, 140, 250);
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.oculta{
+    display: none;
+}

@@ -1,0 +1,36 @@
+body{
+    background-image: url(./img/video_fondo_rosa.gif);
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 100% auto;
+}
+#Pelis{
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+    font-size: 2rem;
+    color: rgb(255, 0, 166);
+    /*ponerle borde a las letras, grosor y color*/
+    -webkit-text-stroke: 0.1rem black;
+}
+
+button{
+    border: 0.15rem solid fuchsia;
+    border-radius: 15%;
+    background-color: lightpink;
+    font-size: 1.2rem;
+    color: fuchsia;
+}
+
+button:hover{
+    border: 0.15rem solid lightpink;
+    border-radius: 15%;
+    background-color: fuchsia;
+    font-size: 1.2rem;
+    color: lightpink;
+}
+
+#cajaTexto{
+    background-color: lightpink;
+    font-size: 1.2rem;
+    border-color: fuchsia;
+}

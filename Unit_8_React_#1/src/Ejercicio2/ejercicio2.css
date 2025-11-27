@@ -1,0 +1,11 @@
+#ejercicio2{
+    color: white;
+    background-color: fuchsia;
+    padding: 5px;
+}
+
+#ejercicio2:hover{
+    color: fuchsia;
+    background-color: white;
+    padding: 5px;
+}

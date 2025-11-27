@@ -1,0 +1,45 @@
+#magenta{
+    background-color: magenta;
+    width: 200px;
+    height: 200px;
+}
+#rojo{
+    background-color: red;
+    width: 200px;
+    height: 200px;
+}
+#rosa{
+    background-color: pink;
+    width: 200px;
+    height: 200px;
+}
+#azul{
+    background-color: blue;
+    width: 200px;
+    height: 200px;
+}
+#circulo{
+    width: 100px;
+    height: 100px;
+    background-color: grey;
+    border-radius: 50%;
+    margin: auto;
+    margin-top: 50px;
+}
+#cian{
+    background-color: rgb(129, 252, 252);
+    width: 200px;
+    height: 200px;
+}
+#verde
+{
+    background-color: lightgreen;
+    width: 200px;
+    height: 200px;
+}
+#naranja
+{
+    background-color: rgb(244, 203, 126);
+    width: 200px;
+    height: 200px;
+}

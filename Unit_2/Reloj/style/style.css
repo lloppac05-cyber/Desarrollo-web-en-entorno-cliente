@@ -1,0 +1,30 @@
+/*  Fondo animado PINK */
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* GIF como fondo */
+  background: url("video_fondo_rosa.gif") center center / cover no-repeat fixed;
+  background-size: 1500px 800px;
+}
+
+/*RELOJ*/
+#tiempo {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 80px;
+  color: #ffffff;
+  text-shadow: 0 0 20px #ff69b4, 0 0 40px #ff1493;
+}
+
+/*FECHA*/
+#fecha {
+  font-family: Arial, sans-serif;
+  font-size: 24px;
+  color: #cb0267;
+  display: flex;
+  justify-content: center;  /* Centrado vertical */
+  align-items: center;      /* Centrado horizontal */
+}
+
